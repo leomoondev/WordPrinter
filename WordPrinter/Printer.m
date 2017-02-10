@@ -8,6 +8,23 @@
 
 #import "Printer.h"
 
+@interface Printer ()
+//@property  NSString* someWord;
+
+
+@end
+
 @implementation Printer
+
+-(void)printWord:(NSString *)word {
+    
+    int howManyTimes = [self.delegate printer:self numberOfTimesToPrint:word];
+    for (int i = 0; i < howManyTimes; ++i) {
+        [@"AAA" stringByAppendingString:word];
+        NSLog(@"Print a word: %@\n", word);
+        
+
+    }
+}
 
 @end

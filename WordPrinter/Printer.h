@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class Printer;
+
+@protocol PrinterDelegate <NSObject>
+
+-(int)printer:(Printer *)printer numberOfTimesToPrint:(NSString *)word;
+
+@end
+
 @interface Printer : NSObject
 
+@property (nonatomic, weak) id<PrinterDelegate> delegate;
+-(void)printWord:(NSString *)word;
 @end

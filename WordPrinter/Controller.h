@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "Printer.h"
 
-@interface Controller : NSObject <PrinterDelegate>
+@interface Controller : NSObject <PrinterDelegate>;
 
 
 

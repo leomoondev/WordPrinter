@@ -16,15 +16,14 @@ int main(int argc, const char * argv[]) {
         
         Printer *printer = [[Printer alloc] init];
         Controller *controller = [[Controller alloc] init];
-        WonkyController *wonkController = [[WonkyController alloc] init];
+        //WonkyController *wonkController = [[WonkyController alloc] init];
         
         printer.delegate = controller;
-//        printer.delegate = wonkController;
+        //printer.delegate = wonkController;
         
         [printer printWord:@"Hey"];
         [printer printWord:@"Hey?"];
         [printer printWord:@"Another time"];
-        
         
         
     }

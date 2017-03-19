@@ -24,6 +24,8 @@ int main(int argc, const char * argv[]) {
         [printer printWord:@"Hey"];
         [printer printWord:@"Hey?"];
         [printer printWord:@"Another time"];
+        [printer printWord:@"All star"];
+
         
         
     }

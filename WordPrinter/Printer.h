@@ -12,14 +12,15 @@
 
 @protocol PrinterDelegate <NSObject>
 
--(int)printer:(Printer *)printer numberOfTimesToPrint:(NSString *)word;
+- (int)printer:(Printer *)printer numberOfTimesToPrint:(NSString *)word;
+- (BOOL) isStar: (NSString *) word;
 
 @end
+
 
 @interface Printer : NSObject
 
 @property (nonatomic, weak) id<PrinterDelegate> delegate;
--(void)printWord:(NSString *)word;
--(void)addStar:(NSString *) word;
+- (void)printWord:(NSString *)word;
 
 @end

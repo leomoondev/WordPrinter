@@ -9,23 +9,27 @@
 #import "Printer.h"
 
 @interface Printer ()
-//@property  NSString* someWord;
-
-
 @end
 
 @implementation Printer
 
 -(void)printWord:(NSString *)word {
     
-    int howManyTimes = [self.delegate printer:self numberOfTimesToPrint:word];
-    for (int i = 0; i < howManyTimes; ++i) {
-        //[@"*" stringByAppendingString:word];
-        [[NSMutableString stringWithString:word] insertString:@"$" atIndex:0];
-
-        NSLog(@"Print a word: %@\n", word);
+    if ([self.delegate isStar: word]) {
         
-
+        int  howManyTimes = [self.delegate printer: self numberOfTimesToPrint: word];
+        
+        for (int i = 0; i < howManyTimes; i++) {
+            NSLog(@"Print a star word: %@\n", [@"*" stringByAppendingString: [word stringByAppendingString: @"*"]]);
+        }
+    }
+    
+    else {
+        
+        int howManyTimes = [self.delegate printer: self numberOfTimesToPrint: word];
+        
+        for (int i = 0; i < howManyTimes; i++)
+            NSLog(@"Print a word: %@\n", word);
     }
 }
 

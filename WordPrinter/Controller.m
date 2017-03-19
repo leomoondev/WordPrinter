@@ -12,10 +12,19 @@
 -(int)printer:(Printer *)printer numberOfTimesToPrint:(NSString *)text {
     
     if ([text hasPrefix:@"A"]) {
+//        [@"*" stringByAppendingString:text];
+        [[NSMutableString stringWithString:text] insertString:@"$" atIndex:0];
+
         return 2;
     } else if ([text hasSuffix:@"?"]) {
+  //      [@"*" stringByAppendingString:text];
+        [[NSMutableString stringWithString:text] insertString:@"$" atIndex:0];
+
         return 0;
     } else {
+    //    [@"*" stringByAppendingString:text];
+        [[NSMutableString stringWithString:text] insertString:@"$" atIndex:0];
+
         return 1;
     }
 }

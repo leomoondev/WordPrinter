@@ -20,4 +20,6 @@
 
 @property (nonatomic, weak) id<PrinterDelegate> delegate;
 -(void)printWord:(NSString *)word;
+-(void)addStar:(NSString *) word;
+
 @end

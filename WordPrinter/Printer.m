@@ -20,7 +20,9 @@
     
     int howManyTimes = [self.delegate printer:self numberOfTimesToPrint:word];
     for (int i = 0; i < howManyTimes; ++i) {
-        [@"AAA" stringByAppendingString:word];
+        //[@"*" stringByAppendingString:word];
+        [[NSMutableString stringWithString:word] insertString:@"$" atIndex:0];
+
         NSLog(@"Print a word: %@\n", word);
         
 
